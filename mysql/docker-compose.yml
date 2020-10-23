@@ -1,0 +1,15 @@
+version: '3'
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: test-mysql
+        volumes:
+            # - mysql-data:/var/lib/mysql
+            - ./mysql-data:/var/lib/mysql
+        environment:
+            - TZ='Asia/Shanghai'
+            - MYSQL_ROOT_PASSWORD=1
+        restart: always
+# volumes:
+    # mysql-data:
+        # driver: local
